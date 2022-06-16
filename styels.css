@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  margin: auto;
+}
+.container {
+  height: 60px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_left > h1 {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.header_right {
+  display: flex;
+}
+.header_right > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header_right > ul > li {
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 10px;
+  font-family: sans-serif;
+}
+.btn-container {
+}
+.btn-container > button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login_btn {
+  background-color: #e0e7ff;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.login_btn:hover {
+  background: #b3c4ff;
+}
+
+.singup_btn {
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.singup_btn:active {
+  transform: scale(0.9);
+}
+
+.header_menu {
+  display: none;
+  position: relative;
+}
+.menuicon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.close_menuicon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.humburger_menu_open {
+  transform: translateX(0px);
+  background: white;
+  box-shadow: 0px 3px 9px 0px #00000073;
+  position: absolute;
+  right: -6px;
+  width: 80vw;
+  min-width: 300px;
+  height: 100vh;
+  padding: 20px;
+  transition: 0.3s;
+}
+.humburger_menu_hide {
+  transform: translateX(400px);
+  background: white;
+  box-shadow: 0px 3px 9px 0px #00000073;
+  position: absolute;
+  right: -6px;
+  width: 400px;
+  height: 100vh;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.humburger_menu_container {
+  position: fixed;
+  right: 0px;
+  height: 0px;
+  width: 0px;
+}
+
+@media only screen and (max-width: 900px) {
+  .header_right {
+    display: none;
+  }
+  .header_menu {
+    display: block;
+  }
+}
